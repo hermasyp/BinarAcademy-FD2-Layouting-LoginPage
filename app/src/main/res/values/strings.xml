@@ -5,4 +5,11 @@
     <string name="text_btn_login">Login</string>
     <string name="text_btn_login_facebook">Facebook</string>
     <string name="text_btn_login_gmail">Gmail</string>
+    <string name="error_wrong_email_and_password">Wrong Email / Password</string>
+    <string name="text_sucess_login_email">Login Email Success</string>
+    <string name="error_password_empty" translatable="false">Masukkan Password Anda</string>
+    <string name="error_email_empty" translatable="false">Masukkan Email Anda</string>
+    <string name="text_login_facebook_success" translatable="false">\" Login Facebook Success\"</string>
+    <string name="text_login_gmail_success" translatable="false">\" Login Gmail Success\"</string>
+
 </resources>

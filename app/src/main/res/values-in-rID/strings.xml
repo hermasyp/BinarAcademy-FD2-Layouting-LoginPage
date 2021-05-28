@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="text_btn_login">Masuk</string>
+    <string name="hint_form_email">Surel</string>
+    <string name="hint_password">Kata Sandi</string>
+    <string name="text_btn_login_facebook">Muka Buku</string>
+    <string name="text_btn_login_gmail">Gmail</string>
+    <string name="error_wrong_email_and_password">Salah Password / Email</string>
+    <string name="text_sucess_login_email">Login Email Sukses</string>
+</resources>
