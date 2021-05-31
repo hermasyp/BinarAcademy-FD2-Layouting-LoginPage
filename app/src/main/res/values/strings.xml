@@ -11,5 +11,8 @@
     <string name="error_email_empty" translatable="false">Masukkan Email Anda</string>
     <string name="text_login_facebook_success" translatable="false">\" Login Facebook Success\"</string>
     <string name="text_login_gmail_success" translatable="false">\" Login Gmail Success\"</string>
+    <string name="title_menu_homepage_logout">Logout</string>
+    <string name="text_success_logout">Success Logout</string>
+    <string name="title_activity_home">Homepage</string>
 
 </resources>

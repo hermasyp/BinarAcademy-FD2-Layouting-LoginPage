@@ -1,12 +1,16 @@
-package com.catnip.loginapp
+package com.catnip.loginapp.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.catnip.loginapp.R
 import com.catnip.loginapp.databinding.ActivityMainV2Binding
+import com.catnip.loginapp.ui.homepage.HomepageActivity
+import com.catnip.loginapp.utils.preference.UserPreference
 import es.dmoral.toasty.Toasty
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainV2Binding
 
@@ -69,11 +73,25 @@ class MainActivity : AppCompatActivity() {
             Toasty
                 .success(this, getString(R.string.text_sucess_login_email), Toast.LENGTH_SHORT, true)
                 .show()
+            //save shared preference if user already logged in.
+            saveLoginData()
+            //call activity homepage.
+            navigateToHomepage()
         } else {
             Toasty
                 .error(this, getString(R.string.error_wrong_email_and_password), Toast.LENGTH_SHORT, true)
                 .show()
         }
+    }
+
+    private fun navigateToHomepage(){
+        val intent = Intent(this@LoginActivity, HomepageActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
+    }
+    private fun saveLoginData(){
+        UserPreference(this).isUserLoggedIn = true
     }
 
 }
